@@ -1,0 +1,159 @@
+---
+title: "TPM Proyek - K-Means"
+author: "Raihan Sabillah Adisecha"
+date: "2025-02-22"
+output: html_document
+---
+
+# LIBRARY
+
+```{r}
+library(ggplot2)
+library(cluster)
+library(factoextra)
+library(dplyr)
+library(dbscan)
+library(ggplot2)
+library(factoextra)
+```
+
+# DATA
+
+```{r}
+# Load data
+#df <- read.delim("clipboard", sep = "\t", header = TRUE)
+url <- "https://raw.githubusercontent.com/raihanadisecha/getfile/refs/heads/main/Proyek%20TPM%20Kelompok%207%20-%20lq45.csv"
+destfile <- "data.csv"  # Nama file yang akan disimpan di lokal
+download.file(url, destfile, method = "curl")  # Jika di Windows, gunakan method = "wininet"
+df <- read.csv(destfile)  # Membaca file jika itu CSV
+file.remove(destfile)
+
+# Menghapus koma pada kolom numerik yang bermasalah dan mengonversi ke numerik
+numeric_columns <- c("harga", "likuid3bln", "marcap", "pendapatan", "rasiope", "beta")
+
+df[numeric_columns] <- lapply(df[numeric_columns], function(x) as.numeric(gsub(",", "", x)))
+
+# Cek apakah sudah benar
+head(df)
+str(df)
+summary(df)
+
+# Pilih variabel numerik yang akan digunakan untuk clustering
+df2 <- df[, c("harga", "likuid3bln", "marcap", "pendapatan", "rasiope", "beta")]
+
+# Normalisasi data (karena skala antar variabel berbeda)
+df_scaled <- scale(df2)
+```
+
+# K-Means
+
+```{r}
+# Menentukan jumlah optimal cluster dengan Elbow Method
+fviz_nbclust(df_scaled,FUNcluster = kmeans,method = "silhouette")
+
+kmeans_df <- eclust(df_scaled,FUNcluster = "kmeans",k=3,graph = F)
+
+# Menambahkan hasil cluster ke dalam data asli
+df$cluster <- as.factor(kmeans_df$cluster)
+
+aggregate(df_scaled,by =list(gerombol=kmeans_df$cluster),
+            FUN = mean)
+
+fviz_cluster(kmeans_df)
+```
+
+```{r}
+# Simpan mean dan standar deviasi sebelum standarisasi
+means <- apply(df2, 2, mean)  # Hitung mean setiap kolom
+sds <- apply(df2, 2, sd)      # Hitung standar deviasi setiap kolom
+
+# Centers dari cluster (masih dalam bentuk standar)
+cluster_centers_std <- kmeans_df$centers  
+
+# Denormalisasi ke skala asli
+cluster_centers_original <- sweep(cluster_centers_std, 2, sds, "*")  # Kalikan dengan std deviasi
+cluster_centers_original <- sweep(cluster_centers_original, 2, means, "+")  # Tambahkan mean
+
+# Tampilkan hasil
+print(cluster_centers_original)
+```
+
+```{r}
+df <- df[,c(1,2,10,3,4,5,6,7,8,9)]
+df
+```
+
+```{r}
+saham_per_cluster <- split(df$kode, df$cluster)
+saham_per_cluster  # Menampilkan daftar nama saham per cluster
+```
+
+# DB SCAN
+
+```{r}
+kk = 12
+ep = 2.9
+
+kNNdistplot(df_scaled, k = kk)  # minPts = 4 atau lebih
+abline(h = ep, col = "red")  # Sesuaikan threshold dari plot
+
+dbscan_result <- dbscan(df_scaled, eps = ep, MinPts = kk)
+
+df$Cluster <- as.factor(dbscan_result$cluster)
+
+fviz_cluster(list(data = df_scaled, cluster = dbscan_result$cluster),
+             geom = "point",
+             ellipse = TRUE,  # Menampilkan batas kluster
+             show.clust.cent = FALSE,
+             ggtheme = theme_minimal())
+
+```
+
+# DUMMY
+
+```{r eval=FALSE, include=FALSE}
+# perform DBSCAN with fpc package
+clus <- fpc::dbscan(df_scaled, eps = 3.6, MinPts = 12)
+
+# visualize the clusters in 2-dimensional space
+fviz_cluster(clus, df_scaled, geom = "point", pointsize = 2)
+```
+
+```{r eval=FALSE, include=FALSE}
+best_eps <- 0
+best_minPts <- 0
+best_clusters <- 0
+
+for (eps in seq(0.1, 1, by = 0.1)) {
+  for (minPts in 3:10) {
+    dbscan_result <- dbscan(df_scaled, eps = eps, minPts = minPts)
+    num_clusters <- length(unique(dbscan_result$cluster)) - 1  # -1 untuk noise (cluster 0)
+
+    if (num_clusters > best_clusters) {
+      best_eps <- eps
+      best_minPts <- minPts
+      best_clusters <- num_clusters
+    }
+  }
+}
+
+cat("Optimal eps:", best_eps, "\nOptimal minPts:", best_minPts)
+
+```
+
+```{r eval=FALSE, include=FALSE}
+# Establish search parameters.
+k <- c(25, 50, 100, 200, 500, 1000)
+eps <- c(0.001, 0.01, 0.02, 0.05, 0.1, 0.2)
+
+# Perform grid search.
+grid <- expand.grid(k = k, eps = eps)
+
+results <- mapply(grid$k, grid$eps, FUN = function(k, eps) {
+  cluster <- dbscan(df_scaled, MinPts = k, eps = eps)$cluster
+  sum <- table(cluster)
+  cat(c("k =", k, "; eps =", eps, ";", sum, "\n"))
+})
+```
+```
+
