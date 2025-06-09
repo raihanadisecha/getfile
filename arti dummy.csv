@@ -1,0 +1,40 @@
+S4_Kategori umur anda.,S4_Kategori umur anda._arti,A5_Yang manakah yang paling sesuai menggambarkan tentang diri Anda?,A5_Yang manakah yang paling sesuai menggambarkan tentang diri Anda?_arti,A142Water_Apakah Anda akan mempertimbangkan untuk meminum air mineral jika tidak ada susu cair siap minum dalam kemasan yang tersedia?,A142Water_Apakah Anda akan mempertimbangkan untuk meminum air mineral jika tidak ada susu cair siap minum dalam kemasan yang tersedia?_arti,A17Nasional_Apakah Anda mengetahui merek susu Nasional?,A17Nasional_Apakah Anda mengetahui merek susu Nasional?_arti,"A43_Dalam 4 minggu terakhir, seberapa sering Anda membeli satu merek susu yang Anda sangat sukai?","A43_Dalam 4 minggu terakhir, seberapa sering Anda membeli satu merek susu yang Anda sangat sukai?_arti",A50.2_Apakah ukuran susu cair siap minum yang Anda konsumsi pada kesempatan kedua terakhir?,A50.2_Apakah ukuran susu cair siap minum yang Anda konsumsi pada kesempatan kedua terakhir?_arti,"A62WhenIseeanewproductontheshelfIamreluctanttogiveitatry_Ketika saya melihat produk baru di rak, saya enggan untuk mencobanya.","A62WhenIseeanewproductontheshelfIamreluctanttogiveitatry_Ketika saya melihat produk baru di rak, saya enggan untuk mencobanya._arti",A64RTDMilkcanbedrinkasmainmealsubstitute_Susu cair siap minum dalam kemasan yang bisa diminum sebagai pengganti makanan utama.,A64RTDMilkcanbedrinkasmainmealsubstitute_Susu cair siap minum dalam kemasan yang bisa diminum sebagai pengganti makanan utama._arti,A67Anlene_Berikan opini Anda mengenai merek susu Anlene. Tidak menjadi masalah jika Anda belum pernah mencoba merek tersebut. Kami ingin mengetahui opini Anda berdasarkan apa yang sudah Anda ketahui.,A67Anlene_Berikan opini Anda mengenai merek susu Anlene. Tidak menjadi masalah jika Anda belum pernah mencoba merek tersebut. Kami ingin mengetahui opini Anda berdasarkan apa yang sudah Anda ketahui._arti,A69Exercisetokeepfite.g.swimmingrunningtaichi_Apakah Anda merupakan orang yang mempunyai gaya hidup suka berolahraga untuk meningkatkan kebugaran tubuh?,A69Exercisetokeepfite.g.swimmingrunningtaichi_Apakah Anda merupakan orang yang mempunyai gaya hidup suka berolahraga untuk meningkatkan kebugaran tubuh?_arti,"D5_Termasuk Anda, ada berapa orang yang tinggal di rumah Anda?","D5_Termasuk Anda, ada berapa orang yang tinggal di rumah Anda?_arti"
+1,Dibawah 1 tahun,1,Saya setiap hari olahraga agar sehat,1,Ya,1,Tahu,1,Sekali dalam sebulan,250,250 ml,1,Sangat Tidak Menggambarkan Saya,1,Pasti Tidak Akan Membelinya,1,Sangat Tidak Baik,1,Sangat Tidak Setuju,1,1 orang 
+2,1-5 tahun,2,Saya makan makanan sehat,0,Tidak,0,Tidak Tahu,2,1-2 kali dalam sebulan,130,130 ml,2,Tidak Menggambarkan Saya,2,Tidak Akan Membelinya,2,Tidak Baik,2,Tidak Setuju,2,2 orang 
+3,6-10 tahun,3,Saya berhati-hati atas apa yang saya konsumsi,,,,,3,2-3 kali dalam sebulan,200,200 ml,3,Agak Tidak Menggambarkan Saya,3,Mungkin Tidak Akan Membelinya,3,Agak Tidak Baik,3,Agak Tidak Setuju,3,3 orang 
+4,11-15 tahun,4,Minum susu adalah hal penting,,,,,4,Sekali dalam seminggu,170,170 ml,4,Antara Menggambarkan dan Tidak Menggambarkan Saya,4,Mungkin Akan Membeli dan Tidak,4,Antara Baik dan Tidak Baik,4,Antara Setuju dan Tidak Setuju,4,4 orang 
+5,16-20 tahun,5,Penting bagi saya untuk mencegah sakit ,,,,,5,2-3 kali dalam seminggu,175,175 ml,5,Agak Menggambarkan Saya,5,Mungkin Akan Membelinya,5,Agak Baik,5,Agak Setuju,5,5 orang 
+6,21-25 tahun ,6,Saya memilih susu cair siap minum dalam kemasan karena praktis bisa dibawa-bawa,,,,,6,4-6 kali dalam seminggu,1000,1000 ml,6,Menggambarkan Saya,6,Akan Membelinya,6,Baik,6,Setuju,6,6 orang 
+7,26-30 tahun ,7,Susu cair siap minum dalam kemasan menggantikan makan saya,,,,,7,Sekali dalam sehari,125,125 ml,7,Sangat Menggambarkan Saya,7,Pasti Akan Membelinya,7,Sangat Baik,7,Sangat Setuju,7,7 orang 
+8,31-35 tahun ,8,Saya minum susu cair siap minum dalam kemasan karena memberikan banyak keuntungan ,,,,,8,Lebih sering dari sekali dalam sehari,500,500 ml,,,,,,,,,8,8 orang lebih 
+9,36-40 tahun ,9,Susu cair siap minum dalam kemasan membantu menjaga energy / stamina ,,,,,,,190,190 ml,,,,,,,,,,
+10,41-45 tahun ,10,Susu cair siap minum kemasan membuat saya fit ,,,,,,,70,70 ml,,,,,,,,,,
+11,46-50 tahun ,11,Saya tidak begitu peduli atas apa yang saya minum,,,,,,,150,150 ml,,,,,,,,,,
+12,51-55 tahun ,12,Susu yang kaya akan vitamin adalah penting bagi saya,,,,,,,120,120 ml,,,,,,,,,,
+13,56-60 tahun ,13,"Saya peduli akan penampilan, sehingga penting bagi saya untuk menjadi awet muda",,,,,,,350,350 ml,,,,,,,,,,
+14,Diatas 60 tahun ,14,Minum susu merupakan hal yang membuat saya nyaman,,,,,,,375,375 ml,,,,,,,,,,
+,,15,Susu yang saya minum harus dapat dinikmati oleh seluruh anggota keluarga,,,,,,,180,180 ml,,,,,,,,,,
+,,16,"Saya memerlukan susu yang terbuat dari bahan alami, tanpa pengawet",,,,,,,220,220 ml,,,,,,,,,,
+,,17,Saya minum susu untuk meningkatkan perkembangan otak,,,,,,,230,230 ml,,,,,,,,,,
+,,18,Saya minum susu cair siap minum dalam kemasan karena tidak membuat saya diare,,,,,,,240,240 ml,,,,,,,,,,
+,,19,Penting bagi saya untuk menjaga bentuk tubuh ,,,,,,,60,60 ml,,,,,,,,,,
+,,20,Saya harus memastikan susu yang saya konsumsi bersih dan higienis,,,,,,,189,189 ml,,,,,,,,,,
+,,21,Saya minum susu untuk menjaga kesehatan tulang,,,,,,,140,140 ml,,,,,,,,,,
+,,22,"Bagi saya, susu harus mempunyai rasa yang enak",,,,,,,400,400 ml,,,,,,,,,,
+,,,,,,,,,,330,330 ml,,,,,,,,,,
+,,,,,,,,,,110,110 ml,,,,,,,,,,
+,,,,,,,,,,225,225 ml,,,,,,,,,,
+,,,,,,,,,,115,115 ml,,,,,,,,,,
+,,,,,,,,,,50,50 ml,,,,,,,,,,
+,,,,,,,,,,210,210 ml,,,,,,,,,,
+,,,,,,,,,,160,160 ml,,,,,,,,,,
+,,,,,,,,,,100,100 ml,,,,,,,,,,
+,,,,,,,,,,90,90 ml,,,,,,,,,,
+,,,,,,,,,,195,195 ml,,,,,,,,,,
+,,,,,,,,,,275,275 ml,,,,,,,,,,
+,,,,,,,,,,18,18 ml,,,,,,,,,,
+,,,,,,,,,,85,85 ml,,,,,,,,,,
+,,,,,,,,,,80,80 ml,,,,,,,,,,
+,,,,,,,,,,300,300 ml,,,,,,,,,,
+,,,,,,,,,,118,118 ml,,,,,,,,,,
+,,,,,,,,,,75,75 ml,,,,,,,,,,
